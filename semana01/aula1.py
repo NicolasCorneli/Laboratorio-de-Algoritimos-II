@@ -43,3 +43,15 @@ def main():
     print(result)
     
 main()
+
+#Invertendo uma Lista em Python sem Usar Métodos Interno
+def invert_list(list1):
+    reverse = list1[::-1]
+    return reverse
+
+def main():
+    list1 = [1,2,3,4,5,6,7,8,9]
+    reverse = invert_list(list1)
+    print(reverse)
+main()
+    
