@@ -4,7 +4,7 @@ for line in range(len(matriz)):
     for column in range(len(matriz[line])):
         print(matriz[line][column], end=" ")
     print(end="\n")
-###########
+#EXEMPLO 1
 
 def scale(matriz,scale_value):
     result = []
@@ -24,7 +24,7 @@ def main():
     print(result)
 
 main()
-############################
+#EXEMPLO 2
 def diagonal_multiplicator(matriz):
     result = 1
     for line in range(len(matriz)):
@@ -32,7 +32,6 @@ def diagonal_multiplicator(matriz):
             if line == column:
                 result = result * matriz[line][column]
                 
-    
     return result
     
     
