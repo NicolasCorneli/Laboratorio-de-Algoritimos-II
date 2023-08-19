@@ -13,11 +13,7 @@ def scale(matriz,scale_value):
         for column in range(len(matriz[line])):
             result[line].append(matriz[line][column] * scale_value)
            
-    return result
-    
-    
-    
-    
+    return result        
 def main():
     matriz = [[5,32,5],[3,76,43],[20,27,83]]
     result = scale(matriz,5)
@@ -32,10 +28,7 @@ def diagonal_multiplicator(matriz):
             if line == column:
                 result = result * matriz[line][column]
                 
-    return result
-    
-    
-    
+    return result  
     
 def main():
     matriz = [[1,2,3],[4,5,6],[7,8,9]]
@@ -57,3 +50,19 @@ main()
     
 #Crie um método que receba uma lista com elementos duplicados. Ela deve gerar uma lista com os elementos que estava duplicados e uma lista com os elementos unificados.
 
+def a(list1):
+    duplicated_list = []
+    unified_list = []
+    for x in range(len(list1)):
+        if list1[x] not in unified_list:
+            unified_list.append(list1[x])
+        if list1[x] == list1[x-1]:
+            duplicated_list.append(list1[x])
+    print(unified_list)
+    print(duplicated_list)
+def main():
+    list1 = [1,1,2,2,3,3,4,5]
+    a(list1)
+    
+    
+main()
