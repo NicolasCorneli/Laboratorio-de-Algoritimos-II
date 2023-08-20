@@ -66,3 +66,22 @@ def main():
     
     
 main()
+
+# A partir de uma matriz 3 x 3 numérica, percorra a matriz e some os maiores valores de cada linha.
+
+def a(matriz):
+    final_list = []
+    for line in range(len(matriz)):
+        total = 0
+        number = matriz[line][0]
+        for column in range(len(matriz[line])):
+            if matriz[line][column] > number:
+                number = matriz[line][column]
+                total = total + number
+        final_list.append(total)
+    print(final_list)
+def main():
+    matriz = [[1,2,3],[4,5,6],[7,8,9]]
+    a(matriz)
+    
+main()
