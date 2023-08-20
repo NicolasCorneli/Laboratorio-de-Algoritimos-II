@@ -86,3 +86,28 @@ def main():
     
 main()
 #A partir de uma matriz 3 x 3 numérica, percorra a matriz e calcule o valor médio total da matriz e de cada linha.
+
+def average_line(matriz):
+    final_average_list = []
+    for line in range(len(matriz)):
+        average = 0
+        for column in range(len(matriz[line])):
+            average = average + matriz[line][column]
+            RealAverage = average / 3
+        final_average_list.append(RealAverage)
+    print(final_average_list)
+    
+def all_matriz_average(matriz):
+    final_matriz_list = []
+    average = 0
+    for line in range(len(matriz)):
+        for column in range(len(matriz[line])):
+            average = average + matriz[line][column]
+            RealAverage = average / 9
+    final_matriz_list.append(RealAverage)
+    print(final_matriz_list)
+def main():
+    matriz = [[1,2,3],[4,5,6],[7,8,9]]
+    average_line(matriz)
+    all_matriz_average(matriz)
+main()
