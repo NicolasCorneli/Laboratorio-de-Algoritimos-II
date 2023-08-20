@@ -85,3 +85,4 @@ def main():
     a(matriz)
     
 main()
+#A partir de uma matriz 3 x 3 numérica, percorra a matriz e calcule o valor médio total da matriz e de cada linha.
