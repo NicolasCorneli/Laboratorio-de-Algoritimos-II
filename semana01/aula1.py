@@ -111,3 +111,21 @@ def main():
     average_line(matriz)
     all_matriz_average(matriz)
 main()
+#Escreva uma função que recebe duas matrizes como entrada e retorna uma nova matriz que é a soma das duas matrizes. Ambas matrizes devem possuir o tamanho de 3 x 3.
+
+def matrizes(matriz1,matriz2):
+    matriz3 = []
+    for line in range(len(matriz1)):
+        for column in range(len(matriz1[line])):
+            sum1 = matriz1[line][column] + matriz2[line][column]
+            matriz3.append(sum1)
+    print(matriz3)
+    
+    
+    
+    
+def main():
+    matriz1 = [[1,2,3],[4,5,6],[7,8,9]]
+    matriz2 = [[9,8,7],[6,5,4],[3,2,1]]
+    matrizes(matriz1,matriz2)
+main()
