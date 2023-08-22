@@ -120,12 +120,13 @@ def matrizes(matriz1,matriz2):
             sum1 = matriz1[line][column] + matriz2[line][column]
             matriz3.append(sum1)
     print(matriz3)
-    
-    
-    
-    
+       
 def main():
     matriz1 = [[1,2,3],[4,5,6],[7,8,9]]
     matriz2 = [[9,8,7],[6,5,4],[3,2,1]]
     matrizes(matriz1,matriz2)
 main()
+#6. Escreva uma função que verifica se uma matriz quadrada é simétrica, ou seja, se ela é igual à sua matriz transposta.
+??????????????????????????
+#7. Dado uma lista de números inteiros, agrupe a lista em um conjunto de intervalos
+??????????????????????????
