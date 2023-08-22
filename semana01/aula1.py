@@ -49,24 +49,22 @@ def main():
 main()
     
 #Crie um método que receba uma lista com elementos duplicados. Ela deve gerar uma lista com os elementos que estava duplicados e uma lista com os elementos unificados.
-
-def a(list1):
+def organizator(my_list):
+    uniq_list = []
     duplicated_list = []
-    unified_list = []
-    for x in range(len(list1)):
-        if list1[x] not in unified_list:
-            unified_list.append(list1[x])
-        if list1[x] == list1[x-1]:
-            duplicated_list.append(list1[x])
-    print(unified_list)
-    print(duplicated_list)
-def main():
-    list1 = [1,1,2,2,3,3,4,5]
-    a(list1)
-    
-    
-main()
+    for item in my_list:
+        if item not in uniq_list:
+            uniq_list.append(item)
+        else:
+            duplicated_list.append(item)
+    return uniq_list, duplicated_list
 
+def main():
+    my_list = [1,2,2,3,4,5,6,1,7]
+    uniq_list, duplicated_list = organizator(my_list)
+    print(uniq_list)
+    print(duplicated_list)
+main()
 # A partir de uma matriz 3 x 3 numérica, percorra a matriz e some os maiores valores de cada linha.
 
 def a(matriz):
