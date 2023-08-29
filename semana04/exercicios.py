@@ -12,3 +12,17 @@ def main():
     dicionario = d()
     print(dicionario)
 main()
+#2
+buy_list = {}
+leave = "yes"
+while leave != "no":
+    product_name = input("Digite o nome do produto: ")
+    quantity = int(input("Digite a quantidade: "))
+    
+    if product_name in buy_list:
+        buy_list[product_name] = buy_list[product_name] + quantity
+    else:
+        buy_list[product_name] = quantity
+    print(buy_list)
+    leave = input("Continuar comprando? :")
+print()
