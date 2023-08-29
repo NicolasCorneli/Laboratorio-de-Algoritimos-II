@@ -66,5 +66,7 @@ while value != 0:
         value = value - 10
         c10 = c10 + 1
 print("A quantidade de notas de 100 é:",c100,"de 50 é:",c50,"de 20 é:",c20,"de 10 é:",c10)
-    
+
+#4. Dado uma matriz de números inteiros positivos de dimensões n x n, onde n >= 5, encontre o maior produto de uma seqüência de 5 números consecutivos (a seqüência pode estar na vertical, na horizontal ou na diagonal principal).
+
 
