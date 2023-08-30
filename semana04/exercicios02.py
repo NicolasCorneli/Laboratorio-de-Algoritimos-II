@@ -21,3 +21,27 @@ def main():
     
     
 main()
+
+#2. Crie uma função que receba uma frase e retorne em um objeto as letras com a quantidade de vezes com que elaestá presente na frase. Exemplo: ‘Joao’ => { ‘j’: 1,‘o’: 2,‘a’: 1 }
+
+def count_numbers(my_word):
+    count_dict = {}
+    for word in my_word:
+        for letter in word:
+            
+            if letter in count_dict:
+                count_dict[word] = count_dict[word] + 1
+            else:
+                count_dict[word] = 1
+            
+    return count_dict
+    
+    
+def main():
+    my_word = "aabbcb"
+    result = count_numbers(my_word)
+    
+    print(result)
+    
+    
+main()
