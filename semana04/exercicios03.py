@@ -26,3 +26,26 @@ main()
 #uma lista com as aulas que você tem nesse dia (sábado e domingo recebem listas vazias, ou você tem aula?). Após,
 #imprima o resultado de forma amigável.
 
+def dictionary(dic):
+    dic["Segunda"] = ["Foil"]
+    dic["Terça"] = ["Laboratório de Algoritimos II"]
+    dic["Quarta"] = []
+    dic["Quinta"] = ["Probabilidade e Estatística"]
+    dic["Sexta"] = ["Fundamentos de economia e administração"]
+    dic["Sábado"] = ["Organização e Arquitetura de Computadores"]
+    dic["Domingo"] = []
+    return dic
+def answers(dic):
+    print("Segunda-feira, hoje é dia de",dic["Segunda"])
+    print("Terça-feira,hoje temos",dic["Terça"])
+    print("Quarta-feira",dic["Quarta"])
+    print("Quinta-feira, dia de",dic["Quinta"])
+    print("Sexta-feira, aulinha de",dic["Sexta"])
+    print("Sábado, começando o dia com",dic["Sábado"])
+    print("Finalmente Domingo...",dic["Domingo"])
+
+def main():
+    dic = {}
+    dic = dictionary(dic)
+    answers(dic)
+main()
