@@ -51,3 +51,28 @@ def main():
 main()
 #3.Crie um dicionário vazio filmes = {}. Utilize o nome de um filme como chave. E, como valor, outro dicionário
 #contendo o vilão e o ano em que o filme foi lançado. Preencha 5 filmes e exiba de forma amigável.
+
+def some_movies(movies,dictionary_villains):
+    dictionary_villains["1"] = "Ghost Face","1996"
+    dictionary_villains["2"] = "Anton Chigurh","2007"
+    dictionary_villains["3"] = "Dr.Octopus","2004"
+    dictionary_villains["4"] = "Antonio Montana","1983"
+    dictionary_villains["5"] = "Joker","2008"
+    
+    movies["Scream"] = dictionary_villains["1"] 
+    movies["No country for old men"] = dictionary_villains["2"] 
+    movies["Spider-Man 2"] = dictionary_villains["3"]
+    movies["Scarface"] = dictionary_villains["4"] 
+    movies["Batman"] = dictionary_villains["5"]
+    return movies,dictionary_villains
+
+def prints(movies,dictionary_villains):
+    print(movies)
+
+def main():
+    movies = {}
+    dictionary_villains = {}
+    movies,dictionary_villainsvillains = some_movies(movies,dictionary_villains)
+    prints(movies,dictionary_villains)
+
+main()
