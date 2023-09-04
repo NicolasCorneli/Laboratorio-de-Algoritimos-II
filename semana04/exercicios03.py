@@ -98,3 +98,34 @@ def main():
 main()
 #5.Escreva uma função que conta a quantidade de vogais em um texto e armazena tal quantidade em um dicionário,
 #onde a chave é a vogal considerada.
+
+def whatever(dic,counterA,counterE,counterI,counterU,counterO): 
+    text = input("Digite o que quiser: ")
+    for x in text:
+        for y in x:
+            if y == "a":
+                counterA = counterA + 1
+                dic["A"] = counterA
+            elif y == "e":
+                counterE = counterE + 1
+                dic["E"] =  counterE
+            elif y == "i":
+                counterI = counterI + 1
+                dic["I"] =  counterI
+            elif y == "u":
+                counterU = counterU + 1
+                dic["U"] =  counterU
+            elif y == "o":
+                counterO = counterO + 1
+                dic["O"] =  counterO
+    return dic
+def main():
+    dic = {}
+    counterA = 0
+    counterE = 0
+    counterI = 0
+    counterU = 0
+    counterO = 0
+    dic = whatever(dic,counterA,counterE,counterI,counterU,counterO)
+    print("A quantide de vogais é:",(dic))
+main()
