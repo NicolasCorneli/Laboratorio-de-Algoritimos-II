@@ -76,3 +76,25 @@ def main():
     prints(movies,dictionary_villains)
 
 main()
+#4.Escreva um programa em Python que verifique se uma chave existe ou não em um dicionário. Se a chave existir no
+#dicionário, imprima Verdadeiro. Caso contrário, imprima Falso.
+
+def dictionary(dic):
+    dic["Key1"] = "1"
+    dic["Key2"] = "2"
+    dic["Key3"] = "3"
+    return dic
+    
+def ifs(dic):
+    if "Key1" in dic:
+        print("True")
+    else:
+        print("False")
+    
+def main():
+    dic = {}
+    dic =  dictionary(dic)
+    ifs(dic)
+main()
+#5.Escreva uma função que conta a quantidade de vogais em um texto e armazena tal quantidade em um dicionário,
+#onde a chave é a vogal considerada.
