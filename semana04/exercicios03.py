@@ -100,22 +100,22 @@ main()
 #onde a chave é a vogal considerada.
 
 def whatever(dic,counterA,counterE,counterI,counterU,counterO): 
-    text = input("Digite o que quiser: ")
+    text = input("Digite o que quiser: ").upper()
     for x in text:
         for y in x:
-            if y == "a":
+            if y == "A":
                 counterA = counterA + 1
                 dic["A"] = counterA
-            elif y == "e":
+            elif y == "E":
                 counterE = counterE + 1
                 dic["E"] =  counterE
-            elif y == "i":
+            elif y == "I":
                 counterI = counterI + 1
                 dic["I"] =  counterI
-            elif y == "u":
+            elif y == "U":
                 counterU = counterU + 1
                 dic["U"] =  counterU
-            elif y == "o":
+            elif y == "O":
                 counterO = counterO + 1
                 dic["O"] =  counterO
     return dic
