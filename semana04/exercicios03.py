@@ -133,3 +133,28 @@ main()
 #o nome do aluno. A entrada de dados deve terminar quando for lida uma string vazia como nome. Escreva uma
 #função que retorna a média do aluno, dado seu nome.
 
+def a(dic):
+    x = "a"
+    while x != "SAIR":
+        x = input("Digite seu nome:").upper()
+        if x == "SAIR":
+            break
+        y = float(input("Digite sua nota:"))
+        z = float(input("Digite sua nota:"))
+        dic[x] = y,z
+    return dic
+def fmedia(dic):
+    media = 0
+    name = input("Digite o nome do aluno o qual deseja ver a média: ").upper()
+    if name in dic:
+        media = dic[name][0] + dic[name][1]
+        media = media / 2
+        print("O aluno",name,"teve a média",media)
+    else:
+        print("Nome não existente")
+
+def main():
+    dic = {}
+    dic = a(dic)
+    fmedia(dic)
+main()
