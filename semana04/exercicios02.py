@@ -45,3 +45,32 @@ def main():
     
     
 main()
+#3. Faça um programa que leia nomes de alunos e suas respectivas notas até que o nome ’oooo’ seja informado, após
+#o fim da leitura, imprima o nome do aluno que possui a maior nota. Obs.: Use dicionário para resolver essa questão.
+def a(dic):
+    x = "a"
+    while x != "OOOO":
+        x = input("Digite seu nome:").upper()
+        if x == "OOOO":
+            break
+        y = float(input("Digite sua nota:"))
+        dic[x] = y
+    return dic
+def fmore(dic):
+    more = 0
+    y = 0
+    z = 0
+    for x in dic:
+        y = y + 1 
+        if more < dic[x]:
+            z = z + 1
+            more = dic[x]
+    y = y - z
+    name = list(dic.items())[y][0]
+    print("O aluno",name,"teve a maior nota")
+
+def main():
+    dic = {}
+    dic = a(dic)
+    fmore(dic)
+main()
