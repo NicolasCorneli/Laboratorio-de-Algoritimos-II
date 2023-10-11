@@ -40,11 +40,36 @@ main()
 #2. Crie um programa que receba através de um input o valor numérico de um mês e retorne seu valor escrito. Lembre
 #de tratar as exceções do seu programa. Exemplo: 1 -> Janeiro, 12 -> Dezembro
 
+class InvalidMonthException(BaseException):
+    pass
+def get_month_name(month):
+    try:
+        months = ("January","February","March","April","May","June","July","August","September","October","November","December")
+        return months[month - 1]
+    except IndexError:
+        print("[ERRO] O mês acessado não existe!")
+    except BaseExceptions as error:
+        print(f"[ERRO] Ocorreu um erro:{error}")
+        
+        
+def main():
+    while True:
+        try:
+            month = int(input("Digite o mês: "))
+            month_name = get_month_name(month)
+        
+            if month > 12 or month < 1:
+                raise InvalidMonthException()
+        
+            print(f"Nome do mês: {month_name}")
+        except ValueError:
+            print("[ERRO] Você deve digitar somente números inteiros!")
+        except InvalidMonthException:
+            print("[ERRO] O mês informado não existe")
+        except BaseExceptions as error:
+            print(f"[ERRO] Ocorreu um erro:{error}")
 
-
-
-
-
+main()
 
 
 #3. Crie uma função que recebe um ano através de um input e defina se o mesmo é bissexto ou não. Utilize as seguintes
