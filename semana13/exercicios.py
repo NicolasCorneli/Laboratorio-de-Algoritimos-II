@@ -44,3 +44,24 @@ def main():
     calculate_square_root(number)
 main()
     
+#2. Imagine que você está implementando um sistema para avaliação de um produto. O
+#produto pode através de números inteiros de 0 até 10. Crie uma função que, ao ser
+#chamada, solicite ao usuário um número inteiro e verifique através da declaração
+#assert se o número está dentro do range permitido. Se não estiver, lance uma exceção
+#AssertionError com uma mensagem indicando que o número está fora do intervalo
+#permitido.
+
+def zero_to_ten(number):
+    try:
+        assert number >= 0 and number <= 10
+        print("Obrigado pela avaliação!")
+    except AssertionError:
+        print("[ERRO] O número está fora do intervalo (0 a 10)")
+    except BaseException as error:
+        print(f"[ERRO] Ocorreu um erro: {error}")
+        
+def main():
+    number = int(input("De uma nota para o produto (0 a 10): "))
+    zero_to_ten(number)
+main()
+    
