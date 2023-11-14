@@ -76,5 +76,5 @@ main()
 #lance uma exceção ValueError utilizando a cláusula raise com uma mensagem
 #indicando que o triângulo informado é inválido.
 
-
+?
 
