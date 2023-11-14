@@ -61,7 +61,12 @@ def zero_to_ten(number):
         print(f"[ERRO] Ocorreu um erro: {error}")
         
 def main():
-    number = int(input("De uma nota para o produto (0 a 10): "))
+    number = 0
+    try:
+        number = int(input("De uma nota para o produto (0 a 10): "))
+    except ValueError:
+        print("Digite um número inteiro dentro do intervalo mencionado")
+
     zero_to_ten(number)
 main()
     
