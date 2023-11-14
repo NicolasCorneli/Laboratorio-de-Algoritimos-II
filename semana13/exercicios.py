@@ -70,3 +70,11 @@ def main():
     zero_to_ten(number)
 main()
     
+#Crie um método para verificar se um triângulo é equilátero (todos os lados iguais),
+#isósceles (dois lados iguais) ou escaleno (todos lados diferentes). Se os lados não
+#formarem um triângulo válido (se a soma de dois lados for menor que o terceiro lado),
+#lance uma exceção ValueError utilizando a cláusula raise com uma mensagem
+#indicando que o triângulo informado é inválido.
+
+
+
