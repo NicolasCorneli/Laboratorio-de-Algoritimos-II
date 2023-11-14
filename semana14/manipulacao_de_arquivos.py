@@ -67,4 +67,5 @@ def main():
     #generate_random_numbers_writelines(100)
     #avg_with_readline()
     #avg_with_for()
+    #avg_with_readlines()
 main()
