@@ -16,3 +16,30 @@ def main():
     print(result)
 
 main()
+
+#2. Crie um arquivo de texto contendo várias linhas de texto. Escreva um programa
+#que solicita ao usuário uma palavra e verifica se essa palavra está presente no
+#arquivo. Se estiver, o programa deve imprimir a linha em que a palavra foi
+#encontrada.
+
+def verify_word():
+    word = input("Digite uma palavra: ")
+    my_file = open("exercicio-02.txt","r")
+    file_content_line = my_file.readline()
+    line_count = 0
+    
+    while file_content_line != "":
+        line_count = line_count + 1
+        
+        if word == file_content_line:
+            print(line_count)
+        
+        file_content_line = my_file.readline()
+    
+    my_file.close()
+    
+def main():
+    verify_word()
+
+
+main()
