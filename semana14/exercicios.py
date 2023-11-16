@@ -73,4 +73,36 @@ main()
 #frente. Ou seja, a última linha do arquivo original será a primeira linha no novo
 #arquivo, e assim por diante.    
 
+def reversing_archives(reversed_file_list):
+    archive = input("Digite o nome do arquivo: ")
+    
+    my_file = open(f"{archive}.txt","r")
+    
+    content = my_file.read()
+    
+    split_content = content.split()
+    
+    for x in range(len(split_content)):
+        reversed_file_list.append(split_content[-1-x])
+    
+    print(reversed_file_list)
+    
+    my_file.close()
+        
+    
+def main():
+    reversed_file_list = []
+    reversing_archives(reversed_file_list)
+    
+main()
 
+#6. Faça um programa contendo uma função que recebe como argumentos os
+#nomes de dois arquivos. O primeiro arquivo contém nomes de alunos e o segundo
+#arquivo contém as notas dos alunos. No primeiro arquivo, cada linha corresponde
+#ao nome de um aluno e no segundo arquivo, cada linha corresponde às notas dos
+#alunos (uma ou mais). Assuma que as notas foram armazenadas como strings, e
+#estão separadas umas das outras por espaços em branco. Leia os dois arquivos e
+#gere um terceiro arquivo que contém o nome do aluno seguido da média de suas notas.
+
+    
+    
