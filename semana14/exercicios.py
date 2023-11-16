@@ -43,3 +43,7 @@ def main():
 
 
 main()
+
+#3. Crie um programa que pede ao usuário para digitar o nome de um arquivo. Em
+#seguida, o programa deve criar uma cópia desse arquivo com o nome
+#"copia_nomeoriginal" (por exemplo, se o arquivo original for "exemplo.txt", a cópia deve ser "copia_exemplo.txt").
