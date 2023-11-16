@@ -105,4 +105,35 @@ main()
 #gere um terceiro arquivo que contém o nome do aluno seguido da média de suas notas.
 
     
+    def opening_archives(names,grades,dic):
+    names_file = open(f"{names}.txt","r")
+    grades_file = open(f"{grades}.txt","r")
+    names_grades_file = open("studentsgrades.txt","w")
     
+    
+    names_content = names_file.readline()
+    grades_content = grades_file.readline()
+    
+    while names_content and grades_content != "":
+        
+        names_content = names_file.readline()
+        grades_content = grades_file.readline()
+    
+        names_grades_file.write(names_content)
+        names_grades_file.write(grades_content)
+        
+        dic[names_content] = grades_content
+    
+    names_grades_file = open("studentsgrades.txt","r")
+    
+    print(names_grades_file.read())
+    print(dic)
+
+
+def main():
+    names = input("Digite o nome do arquivo que contém os nomes dos alunos: ")
+    grades = input("Digite o nome do arquivo que contém as notas dos alunos: ")
+    dic = {}
+    opening_archives(names,grades,dic)
+    
+main()
