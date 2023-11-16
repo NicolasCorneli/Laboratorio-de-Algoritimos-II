@@ -47,3 +47,30 @@ main()
 #3. Crie um programa que pede ao usuário para digitar o nome de um arquivo. Em
 #seguida, o programa deve criar uma cópia desse arquivo com o nome
 #"copia_nomeoriginal" (por exemplo, se o arquivo original for "exemplo.txt", a cópia deve ser "copia_exemplo.txt").
+
+def copying_archives():
+    archive = input("Digite o nome do arquivo que deseja copiar: ")
+    copy_archive = f"copy_{archive}.txt"
+    my_file = open(f"{archive}.txt","r")
+    my_copy_file = open(copy_archive,"w")
+    content = my_file.read()
+    my_copy_file.write(content)
+    my_copy_file = open(copy_archive,"r")
+   
+    print(my_copy_file.read())
+    
+    
+    
+    my_file.close()
+    my_copy_file.close()
+    
+def main():
+    copying_archives()
+    
+main()
+    
+#5. Crie um programa que lê um arquivo de texto e escreve suas linhas de trás para
+#frente. Ou seja, a última linha do arquivo original será a primeira linha no novo
+#arquivo, e assim por diante.    
+
+
