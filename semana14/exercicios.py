@@ -68,7 +68,26 @@ def main():
     copying_archives()
     
 main()
-    
+
+
+#4. Faça uma função que leia um arquivo texto contendo uma lista de endereços IP
+#e gere dois outros arquivos, um contendo os endereços IP válidos e outro contendo
+#os endereços inválidos. O formato de um endereço IP é num1.num.num.num, onde
+#num1 vai de 1 a 255 e num vai de 0 a 255.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #5. Crie um programa que lê um arquivo de texto e escreve suas linhas de trás para
 #frente. Ou seja, a última linha do arquivo original será a primeira linha no novo
 #arquivo, e assim por diante.    
