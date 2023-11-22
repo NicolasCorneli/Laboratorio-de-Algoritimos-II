@@ -25,7 +25,7 @@ main()
 def verify_word():
     word = input("Digite uma palavra: ")
     my_file = open("exercicio-02.txt","r")
-    file_content_line = my_file.readline()
+    file_content_line = my_file.readline().rstrip("\n")
     line_count = 0
     
     while file_content_line != "":
@@ -34,7 +34,7 @@ def verify_word():
         if word == file_content_line:
             print(line_count)
         
-        file_content_line = my_file.readline()
+        file_content_line = my_file.readline().rstrip("\n")
     
     my_file.close()
     
