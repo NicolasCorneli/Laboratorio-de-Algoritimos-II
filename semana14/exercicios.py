@@ -75,15 +75,47 @@ main()
 #os endereços inválidos. O formato de um endereço IP é num1.num.num.num, onde
 #num1 vai de 1 a 255 e num vai de 0 a 255.
 
+def verify_ips():
+    ips_file = open("ips.txt","r")
+    valid_ips = []
+    invalid_ips = []
+    
+    for ip in ips_file:
+        try:
+            nums = ip.split(".")
+            if len(nums) != 4:
+                return False
+    
+            for index, num in enumerate(nums):
+                if index == 0:
+                    assert int(index) >= 1 and int(index) <= 255
+                else:
+                    assert int(index) >= 0 and int(index) <= 255
+        
+            return True
+            
+        except BaseException:
+            return False
+        
+        if is_valid == True:
+            valid_ips.append(ip)
+        else:
+            invalid_ips.append(ip)
+        
+    valid_ips_file = open("valid_ips.txt","w")
+    invalid_ips_file = open("invalid_ips.txt","w")
+    valid_ips_file.writelines(valid_ips).rstrip('\n')
+    invalid_ips_file.writelines(invalid_ips).rstrip('\n')
+    valid_ips_file.close()
+    invalid_ips_file.close()
+    
+    print("Validos: ", is_valid)
+    print("Invalidos: ", invalid_ips)
 
-
-
-
-
-
-
-
-
+def main():
+    verify_ips()
+    
+main()
 
 
 
